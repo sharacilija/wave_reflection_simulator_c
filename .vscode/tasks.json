@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build wave_reflections",
+            "type": "shell",
+            "command": "C:/msys64/mingw64/bin/gcc.exe",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-Wpedantic",
+                "-std=c17",
+                "-g",
+                "wave_reflections.c",
+                "-o",
+                "wave_reflections.exe",
+                "-IC:/msys64/mingw64/include",
+                "-LC:/msys64/mingw64/lib",
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
